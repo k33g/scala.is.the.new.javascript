@@ -1,0 +1,6 @@
+val title = (txt: String) => FunctorOfString(txt).map(bold).map(h1)
+val italicTilte = (txt: String) => title(txt).map(italic)
+
+def fmap(fn: String => FunctorOfString) = {
+  fn(this.value)
+}
